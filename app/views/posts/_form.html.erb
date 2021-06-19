@@ -1,0 +1,13 @@
+<%= form_with model: @post, locale: true do |form| %>
+  <div>
+    <%= form.label :genre %>
+    <%= form.select :genre, Post.genres_i18n.invert %>
+  </div>
+  <div>
+    <%= form.label :content %>
+    <%= form.text_area :content %>
+  </div>
+  <div>
+    <%= form.submit "送信" %>
+  </div>
+<% end %>
